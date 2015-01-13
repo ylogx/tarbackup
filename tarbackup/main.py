@@ -44,7 +44,7 @@ def create_tgz(filename_suffix, folder_list, dest_folder='', compression='gz'):
         out.close()
     return dest_path
 
-def main(argv):
+def main(argv=sys.argv):
     folder_in = os.path.curdir
     folder_in = os.path.abspath(folder_in)
     folder_in = os.path.basename(folder_in)

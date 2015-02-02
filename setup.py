@@ -9,7 +9,7 @@ add_keywords = dict(
 setup(
         name='tarbackup',
         description='Create unique tar backups',
-        version='0.0.1',
+        version='0.0.2',
         packages=['tarbackup'],
         license='GPLv3+',
         author='Shubham Chaudhary',

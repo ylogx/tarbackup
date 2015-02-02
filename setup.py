@@ -2,7 +2,7 @@ from distutils.core import setup
 
 add_keywords = dict(
     entry_points = {
-        'console_scripts': ['tarbackup = tarbackup.tar_backup:main'],
+        'console_scripts': ['tarbackup = tarbackup.main:main'],
     },
 )
 

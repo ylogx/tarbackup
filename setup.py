@@ -17,7 +17,7 @@ fhan.close()
 setup(
         name='tarbackup',
         description='Create unique tar backups',
-        version='0.0.3',
+        version='0.0.4',
         packages=['tarbackup'],
         license='GPLv3+',
         author='Shubham Chaudhary',

@@ -47,3 +47,9 @@ def create_tgz(filename_suffix, folder_list, dest_folder='', compression='gz'):
         out.close()
     return dest_path
 
+
+def create_unique_backup(folder_list, dest_folder='', compression='gz'):
+    # Unique name as the current time
+    unique_name = time.strftime("_%Y-%m-%d_%H%M")   # "%d/%m/%Y"
+    create_tgz(unique_name, folder_list, dest_folder, compression)
+

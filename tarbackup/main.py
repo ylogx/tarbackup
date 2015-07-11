@@ -22,7 +22,7 @@ import os
 import sys
 import time
 
-from tarbackup.archiver import create_tgz
+from tarbackup.archiver import create_unique_backup
 
 def main(argv=sys.argv):
     folder_in = os.path.curdir
@@ -30,14 +30,8 @@ def main(argv=sys.argv):
     folder_in = os.path.basename(folder_in)
     if len(argv) >= 2:
         folder_in = argv[1:]
-    # Unique name as the current time
-    unique_name = time.strftime("_%Y-%m-%d_%H%M")   # "%d/%m/%Y"
-    filename_suffix = unique_name
-#     folder_dirs = [ name for name in os.listdir(folder) if os.path.isdir(os.path.join(folder, name)) ]
-#     if not folder_dirs:
-    folder_list = folder_in
-    create_tgz(filename_suffix, folder_list)
-    return
+    create_unique_backup(folder_in)
+    return 0
 
 if __name__ == '__main__':
-    main(sys.argv)
+    sys.exit(main(sys.argv))
